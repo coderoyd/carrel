@@ -1,0 +1,214 @@
+/* Carrel — the app's own palette, taken from DesignSystem/Tokens.swift.
+   Light and dark are the app's two Palettes verbatim, so the site and the
+   product are recognisably the same object. */
+
+:root {
+  --paper:      #F8F5F0;
+  --raised:     #FFFDF9;
+  --ink:        #1A1714;
+  --prose:      #3E3A33;
+  --secondary:  #57514A;
+  --label:      #767067;
+  --tertiary:   #A39C93;
+  --hairline:   #E2DCD3;
+  --resume:     #B8752A;   /* the one functional accent */
+  --remove:     #7B2233;
+  --ground:     #2E2721;
+
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --measure: 620px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:     #1A1714;
+    --raised:    #302D29;
+    --ink:       #F5F1EA;
+    --prose:     #D6D2CC;
+    --secondary: #B8B4AE;
+    --label:     #999590;
+    --tertiary:  #6D6A65;
+    --hairline:  #35312C;
+    --resume:    #D9954A;
+    --remove:    #C97F8E;
+    --ground:    #23201C;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.62;
+  margin: 0;
+  padding: 0 24px 100px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.measure { max-width: var(--measure); margin: 0 auto; }
+
+/* ---- the caps label, as the app sets it ---- */
+.caps {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+
+a { color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--resume); }
+a:focus-visible { outline: 2px solid var(--resume); outline-offset: 3px; border-radius: 2px; }
+
+/* ---- masthead ---- */
+header.top { padding: 88px 0 0; }
+
+.wordmark {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 21px;
+  letter-spacing: 0.01em;
+  margin: 0 0 72px;
+}
+
+h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(38px, 7vw, 58px);
+  line-height: 1.1;
+  letter-spacing: -0.018em;
+  text-wrap: balance;
+  margin: 0 0 24px;
+}
+
+.standfirst {
+  font-size: 21px;
+  line-height: 1.55;
+  color: var(--prose);
+  margin: 0 0 40px;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: 0 0 40px; }
+
+section { margin: 0 0 56px; }
+h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 27px;
+  letter-spacing: -0.012em;
+  line-height: 1.25;
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+p { margin: 0 0 18px; color: var(--prose); }
+p.lede { color: var(--ink); }
+
+/* ---- the three steps ---- */
+ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 26px 0 8px; }
+ol.steps li {
+  counter-increment: s;
+  padding: 0 0 20px 46px;
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--hairline);
+}
+ol.steps li:last-child { border-bottom: 0; }
+ol.steps li::before {
+  content: counter(s);
+  position: absolute;
+  left: 0; top: 1px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--resume);
+  border: 1px solid var(--hairline);
+  width: 28px; height: 28px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+}
+ol.steps b { font-weight: 600; color: var(--ink); display: block; margin-bottom: 3px; }
+
+/* ---- the honesty panel, in the app's raised-card idiom ---- */
+.panel {
+  background: var(--raised);
+  border: 1px solid var(--hairline);
+  border-radius: 14px;
+  padding: 26px 28px 10px;
+  margin: 0 0 26px;
+}
+.panel .caps { display: block; margin-bottom: 12px; }
+
+ul.plain { list-style: none; padding: 0; margin: 0 0 18px; }
+ul.plain li { padding-left: 20px; position: relative; margin-bottom: 10px; color: var(--prose); }
+ul.plain li::before {
+  content: "·";
+  position: absolute; left: 4px;
+  color: var(--resume);
+  font-weight: 700;
+}
+
+.status {
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--secondary);
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  padding: 9px 18px;
+  display: inline-block;
+}
+
+footer.foot {
+  border-top: 1px solid var(--hairline);
+  padding-top: 22px;
+  margin-top: 64px;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  color: var(--tertiary);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  align-items: baseline;
+}
+footer.foot a { color: var(--secondary); }
+
+/* ---- policy document ---- */
+.doc h2 { font-size: 22px; margin-top: 40px; }
+.doc h3 {
+  font-family: var(--sans);
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--label);
+  margin: 30px 0 8px;
+}
+.doc p, .doc li { font-size: 18px; }
+.doc ul { padding-left: 22px; }
+.doc li { margin-bottom: 9px; color: var(--prose); }
+.doc .updated { font-family: var(--sans); font-size: 12.5px; color: var(--tertiary); margin-bottom: 40px; }
+.doc table { border-collapse: collapse; width: 100%; margin: 8px 0 24px; font-size: 16px; }
+.doc th, .doc td { text-align: left; padding: 11px 12px 11px 0; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+.doc th { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--label); }
+.doc td:first-child { white-space: nowrap; padding-right: 22px; font-family: var(--sans); font-size: 14px; color: var(--ink); }
+
+.backlink { display: inline-block; margin-bottom: 34px; }
+
+@media (max-width: 600px) {
+  body { font-size: 18px; padding: 0 20px 72px; }
+  header.top { padding-top: 56px; }
+  .wordmark { margin-bottom: 48px; }
+  .doc table, .doc thead, .doc tbody, .doc tr, .doc td, .doc th { display: block; width: 100%; }
+  .doc thead { display: none; }
+  .doc td { border-bottom: 0; padding-bottom: 2px; }
+  .doc tr { border-bottom: 1px solid var(--hairline); padding-bottom: 12px; margin-bottom: 12px; display: block; }
+  .doc td:first-child { font-weight: 600; white-space: normal; }
+}
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
