@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy — Carrel</title>
+<title>Privacy · Carrel</title>
 <meta name="description" content="Carrel's privacy policy. No account, no analytics, no servers of ours.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
       This page says exactly what that means, and is specific about the few moments Carrel does
       touch the network.
     </p>
-    <p class="updated">Last updated 3 September 2026</p>
+    <p class="updated">Last updated 21 September 2026</p>
     <hr class="rule">
   </header>
 
@@ -29,45 +29,121 @@
   <p class="lede">
     We collect nothing about you. There is no sign-up, no email, no identifier, and no telemetry
     of any kind. Your library, your marks and your reading history live on your device, and sync
-    only through your own iCloud account if you turn that on — where we cannot read them.
+    through your own iCloud account whenever the device is signed in to it, where we cannot read
+    them.
   </p>
 
-  <h2>What stays on your device</h2>
+  <h2>What Carrel keeps, and where</h2>
   <p>
-    Your books and imported files, your reading position, highlights, notes and notebooks, your
-    reading history and goals, and every setting including your typography and themes.
+    On your device: your books and imported files, your reading position, highlights, notes and
+    notebooks, your reviews, your reading history and goals, and every setting, including your
+    typography and themes.
   </p>
   <p>
-    If you enable iCloud sync, this is stored in <strong>your own iCloud private database</strong>
-    using Apple's CloudKit. It is governed by your iCloud account and Apple's terms. Carrel has no
-    ability to read it, and no copy of it exists anywhere else.
+    Whenever the device is signed in to iCloud, Carrel also keeps its library in <strong>your own
+    iCloud private database</strong>, using Apple's CloudKit. There is no switch for this inside
+    Carrel. To keep your library out of iCloud, switch iCloud off for Carrel in iOS Settings. The
+    synced copy is governed by your iCloud account and Apple's terms. We have no ability to read
+    it, and no copy of it exists anywhere else.
+  </p>
+  <p>
+    What travels that way is the library's records: titles, authors and covers, reading positions,
+    highlights, notes, notebooks, bookmarks, your reviews, collections, series and tags, your own
+    themes, the photographs you keep with a book or a mark, your reading history, goals and
+    streaks, the record of unlocks and of changes to the block, and your blocking setup, described
+    below. The book files themselves do not sync, so each device keeps its own. Your typography,
+    appearance and reminder settings are not synced; they stay with this device and its backups.
+    iCloud's key-value storage also carries the addresses of any OPDS libraries you add, and two
+    small markers: that the bundled classics are already on your shelf, and that you have imported
+    a book of your own.
+  </p>
+  <p>
+    Widgets and the Lock Screen's reading activity draw on a space on this device shared only with
+    Carrel's own extensions. iOS may also show them on your own Mac or Apple Watch, through your
+    Apple Account, as it does for any app's widgets. Notifications are scheduled on this device by
+    Carrel itself, and none come from a server of ours. The reading reminder, if you turn it on,
+    arrives at the hour you chose and says back the place you said you would read. Both are kept
+    on this device and are never synced.
+  </p>
+  <p>
+    If you choose an Obsidian folder, Carrel writes one Markdown file of your marks per book into
+    it after each sitting, and whenever you ask. The folder is yours: if it lives in iCloud Drive
+    or a vault that syncs, the files go wherever that folder goes, and Carrel sends them nowhere
+    itself. Exports and shared cards go only where you send them from the share sheet.
   </p>
 
   <h2>The apps you hold</h2>
   <p>
-    Carrel uses Apple's <strong>Family Controls</strong> framework, with individual authorization —
-    an adult managing their own device. It is not configured for supervising anyone else.
+    Carrel uses Apple's <strong>Family Controls</strong> framework, with individual authorization,
+    meaning an adult managing their own device. It is not configured for supervising anyone else.
   </p>
   <p>
-    When you choose which apps and categories to hold, iOS gives Carrel <strong>opaque
-    tokens</strong>, not names. Carrel cannot resolve a token to an app, and therefore never learns
-    which apps you selected. That selection never leaves your device, and we could not read it even
-    if it did.
+    When you choose which apps, categories and websites to hold, iOS gives Carrel <strong>opaque
+    tokens</strong>, not names. Carrel cannot turn a token back into an app, and we never learn
+    which apps you selected. When you open a held app or website, iOS lends its name to the small
+    extension that draws the shield, which uses it for the line on the shield and keeps it nowhere.
+  </p>
+  <p>
+    Those tokens are stored with your blocking setup in three places. The first is Carrel's
+    library, so they travel through your own iCloud private database to your other devices, as
+    described above. The second is a small record in this device's Keychain, which exists so that
+    deleting and reinstalling Carrel does not reset the block. It holds the tokens and the
+    settings around them: whether blocking is on, your hours, strictness, reading goal and how
+    reading unlocks, your banked time, your progress toward the next unlock and any spend in
+    progress, the emergency unlocks and daily windows you have used, any change still waiting out
+    its delay, the date blocking was first set up, when you last changed the strictness, how many
+    apps, categories and websites you chose, a count of reinstalls, and the last clock reading,
+    used to notice the date being changed. That record stays on this device, is not carried to a
+    new device by a backup, remains after Carrel is deleted, and is never sent anywhere. Erasing
+    the device removes it. The third is the space on this device shared only with Carrel's own
+    extensions, where the one that keeps your hours reads them. It goes when Carrel is deleted.
+  </p>
+  <p>
+    None of this makes the block unbreakable, and Carrel does not pretend it is. An adult can
+    always revoke Carrel's Screen Time permission in iOS Settings, and the app says so.
+  </p>
+
+  <h2>The camera and your photos</h2>
+  <p>
+    Carrel uses the camera only when you open it, to photograph a paper book. Each photograph is
+    read on your device by Apple's text and barcode recognition, and none is sent anywhere to be
+    read. What is kept depends on why you took it.
+  </p>
+  <ul class="plain">
+    <li>A cover you photograph when adding a paper book becomes that book's cover. The back is read
+        for its barcode, which is kept as the book's ISBN, and the photograph of it is not
+        kept.</li>
+    <li>A page you photograph to record which page you are on, whether starting or finishing a
+        paper sitting or moving your place, is read and not kept. So is a page you photograph to
+        bring an ebook to the same place as your paper copy.</li>
+    <li>A page you photograph for a passage is kept with that mark, unless you remove the photo
+        before keeping it.</li>
+  </ul>
+  <p>
+    Kept photographs are part of your library, so they travel through your own iCloud with the
+    rest of it. Choosing a picture from your photo library gives Carrel only the one you pick, and
+    Carrel adds to your photo library only when you choose Save Image or Save Video while sharing
+    a mark.
   </p>
 
   <h2>Recaps and questions</h2>
   <p>
-    Where your device supports it, recaps and comprehension questions are generated by a model
-    running <strong>on your phone</strong>. The text of your books and your notes is not sent
-    anywhere for this. On a device that cannot run the model, Carrel says so and offers your own
-    marks instead.
+    Recaps are off until you turn them on. Where your device supports it, recaps, answers to the
+    questions you ask about what you have read so far or about a passage, and suggestions of words
+    to look at when you read closely are written by Apple's model running <strong>on your
+    device</strong>. The text of your books and your notes is not sent anywhere for this. On a device that cannot run
+    the model, Carrel says so, and a recap offers your own marks instead.
   </p>
 
   <h2>When Carrel uses the network</h2>
   <p>
-    Only when you ask it to, and never in the background. Each of these is a direct request from
-    your device to a third party, carrying no identifier of you and no account of ours. Each is
-    subject to that party's own privacy policy.
+    Carrel has no server, so each of these is a direct request from your device to the party
+    named. None carries an account of ours, and apart from your own accounts with Apple and, if you
+    connect it, Readwise, none carries anything that identifies you. Like any request on the
+    internet, each shows the party your network address. Requests to Gutendex, Project Gutenberg
+    and Wikipedia, and books taken from an OPDS library, name Carrel and its version and link to
+    this page. Most happen only while you are using the feature that needs them; the rows say where
+    that is not so. Each is subject to that party's own privacy policy.
   </p>
 
   <table>
@@ -76,42 +152,86 @@
     </thead>
     <tbody>
       <tr>
-        <td>Browsing or downloading a free book</td>
-        <td><a href="https://gutendex.com">gutendex.com</a> and
-            <a href="https://www.gutenberg.org">gutenberg.org</a> receive your search terms and
-            which public-domain book you chose.</td>
+        <td>Browsing or taking a free book</td>
+        <td><a href="https://gutendex.com">gutendex.com</a> receives your search terms and the
+            headings you browse. <a href="https://www.gutenberg.org">gutenberg.org</a> receives
+            the requests for the covers you see and the book you take, which name that book.
+            Fetching a free book whose file has not reached this device asks gutendex.com for it
+            by its catalogue number, then gutenberg.org for the file.</td>
       </tr>
       <tr>
-        <td>Adding a book by title or ISBN</td>
-        <td><a href="https://openlibrary.org">openlibrary.org</a> and the Google Books API receive
-            that title or ISBN so Carrel can fill in the cover and details.</td>
+        <td>A library of your own (OPDS)</td>
+        <td>The address you type, a Calibre server at home for example, and any address its
+            catalogue points to for a shelf or a book, receive the requests for its catalogue
+            pages and for the books you take from it. A library on your home network
+            is reached only with the local network permission iOS asks you for.</td>
       </tr>
       <tr>
-        <td>Looking up a word or phrase</td>
-        <td>The text you selected is sent to
+        <td>A Wikipedia lookup</td>
+        <td>When you choose Wikipedia in a lookup, up to the first six words you selected go to
             <a href="https://en.wikipedia.org">en.wikipedia.org</a> to fetch a summary. Apple's
-            built-in dictionary is handled by iOS and involves no request from Carrel.</td>
+            built-in dictionary and Apple's translation sheet are handled by iOS and involve no
+            request from Carrel.</td>
       </tr>
       <tr>
-        <td>Readwise sync — only if you set it up</td>
-        <td>Off unless you paste your own Readwise access token. Your highlights are then sent to
-            <em>your</em> Readwise account, under
-            <a href="https://readwise.io/privacy">Readwise's privacy policy</a>. The token is kept
-            in your device's Keychain and is never sent anywhere but Readwise. Removing it stops
-            all of this.</td>
+        <td>Readwise, only if you connect it</td>
+        <td>Off unless you paste your own Readwise access token, which Carrel checks with Readwise
+            when you save it. Once connected, your marks go to <em>your</em> Readwise account after
+            each sitting in which something changed, and whenever you choose SYNC NOW: each mark's
+            text, your note, the book's title and author, the page, and when you made it. That is
+            under <a href="https://readwise.io/privacy">Readwise's privacy policy</a>. The token is
+            kept in this device's Keychain and is never sent anywhere but Readwise. FORGET IT
+            removes it and stops all of this.</td>
+      </tr>
+      <tr>
+        <td>iCloud, while signed in</td>
+        <td>Apple's CloudKit carries your library between this device, <em>your</em> iCloud
+            private database and your other devices, as described above, in the background too, so
+            that a change made on one device reaches the others. Apple holds it under your account;
+            we cannot read it.</td>
+      </tr>
+      <tr>
+        <td>Handoff, while an EPUB is open</td>
+        <td>iOS offers the EPUB you are reading to your other devices nearby that are signed in to
+            the same Apple Account, passing its title and Carrel's own reference to it through Apple's Handoff.
+            You can switch Handoff off in iOS Settings.</td>
+      </tr>
+      <tr>
+        <td>Buying or restoring</td>
+        <td>Apple processes every purchase and restore through the App Store, and subscriptions are
+            managed on Apple's own sheet. Carrel asks the App Store for prices only when a screen
+            that offers a purchase is open, and reads which of its purchases your Apple Account
+            holds from StoreKit on your device. We never see your name, your payment details or
+            your Apple Account. The occasional request for a rating is Apple's own prompt, and a
+            rating goes to Apple.</td>
       </tr>
     </tbody>
   </table>
 
+  <p>
+    A few things open in your web browser, and only when you tap them: a web link inside a book, a
+    Wikipedia article and its licence, Apple's standard terms of use from the purchase screen, and
+    this page. From there it is the browser, not Carrel, that makes the request.
+  </p>
+  <p>
+    A book can point to pictures, fonts or styles kept on the web rather than inside its own file.
+    If one does, the page that shows them asks for them from wherever the book points, as a web
+    page would. Which address receives that request is the book's choice, not Carrel's.
+  </p>
+
   <h2>What Carrel never does</h2>
   <ul class="plain">
     <li>No account, sign-up, login or email address.</li>
-    <li>No analytics, telemetry, crash reporting or attribution SDKs. The only third-party code in
-        Carrel is the <a href="https://github.com/readium/swift-toolkit">Readium toolkit</a>, which
-        renders books and makes no network requests of its own.</li>
+    <li>No analytics, telemetry, crash reporting or attribution SDKs. If you have chosen in iOS to
+        share analytics with app developers, Apple may pass us crash reports and anonymous
+        figures about how the app is used; that is Apple's setting and Apple's report, not code in
+        Carrel. The only third-party code in Carrel is the
+        <a href="https://github.com/readium/swift-toolkit">Readium toolkit</a>, with the small
+        libraries it depends on. It renders books, and it is also what fetches an OPDS library's
+        catalogue pages when you open one.</li>
     <li>No advertising, and no tracking of you across other apps or websites.</li>
     <li>No selling or sharing of personal data. There is none to sell.</li>
-    <li>Carrel cannot read your library, your notes, or which apps you hold.</li>
+    <li>We cannot read your library, your notes, or which apps you hold.</li>
   </ul>
 
   <h2>Children</h2>
@@ -123,10 +243,15 @@
 
   <h2>Your rights</h2>
   <p>
-    Because Carrel holds no data about you, there is nothing for us to export, correct or delete —
-    and no request you could make that we would be able to act on. Deleting the app removes your
-    library and settings from the device; turning off iCloud sync and deleting the app's iCloud
-    data removes the synced copy from your own account.
+    Because we hold no data about you, there is nothing for us to export, correct or delete, and no
+    request you could make that we would be able to act on. Deleting the app removes your library,
+    your book files and your settings from the device. Two things stay in this device's Keychain
+    afterwards: the blocking record described above, on purpose, and your Readwise token if you
+    connected one. A reinstall finds both. FORGET IT on the Export sheet removes the token, and
+    erasing the device removes both. The synced copy is in your own iCloud account, where we
+    cannot reach it, and is managed from your iCloud settings in iOS. Anything you
+    exported, saved to your photo library, wrote to an Obsidian folder or sent to Readwise stays
+    where you put it.
   </p>
 
   <h2>Changes</h2>
@@ -142,7 +267,7 @@
 
   <footer class="foot">
     <span>Carrel</span>
-    <span>Last updated 3 September 2026</span>
+    <span>Last updated 21 September 2026</span>
   </footer>
 </div>
 
